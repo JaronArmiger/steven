@@ -10,6 +10,11 @@
   </head>
 
   <body>
+    <% if !flash.empty? %>
+      <% flash.each do |msg_type, msg| %>
+        <%= content_tag(:div, msg, class: "alert alert-#{msg-type}") %>
+      <% end %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
