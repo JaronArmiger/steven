@@ -62,7 +62,7 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
   host = 'desolate-sierra-08174.herokuapp.com/'
-  config.aciton_mailer.default_url_options = { host: host }
+  config.action_mailer.default_url_options = { host: host }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
