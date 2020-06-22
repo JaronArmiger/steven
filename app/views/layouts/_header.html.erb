@@ -1,6 +1,8 @@
 <% if user_signed_in? %>
-  <%= link_to 'Go to App', app_dashboard_index_path, class: 'login-button' %>
+  <%= link_to 'Go to App', '#', class: 'login-button' %>
+  <%= link_to 'Edit my account', edit_user_registration_path %>
   <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
 <% else %>
   <%= link_to 'Sign in', new_user_session_path, class: 'login-button' %>
+  <%= link_to 'Sign up', new_user_registration_path %>
 <% end %>
