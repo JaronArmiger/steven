@@ -1,0 +1,12 @@
+<div class="post">
+	<div>
+		<%= image_tag post.image if post.image.attached? %>
+	</div>
+	<div>
+		<%= post.content %>
+	</div>
+	
+	<span class="timestamp">
+		posted <%= time_ago_in_words(post.created_at) %> ago.
+	</span>
+</div>
