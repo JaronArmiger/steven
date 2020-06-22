@@ -10,7 +10,7 @@ require("channels")
 
 import 'jquery'
 import 'popper'
-import 'boostrap'
+import 'bootstrap'
 
 
 
