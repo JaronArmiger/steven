@@ -9,7 +9,7 @@ require("@rails/activestorage").start()
 require("channels")
 
 import 'jquery'
-import 'popper.js'
+import 'popper'
 import 'boostrap'
 
 
