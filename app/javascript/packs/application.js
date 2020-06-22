@@ -12,7 +12,7 @@ import 'jquery'
 import 'popper.js'
 import 'boostrap'
 
-import 'css/site'
+
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
