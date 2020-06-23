@@ -8,5 +8,45 @@
 		<%= f.file_field :image, accept: "image/jpeg, image/gif, image/png", class: "img-upload" %>
 		<%= f.submit "share", class: "share-button" %>
 	</div>
-	
+	<script>
+		
+		textarea = document.querySelector('textarea');
+		textarea.addEventListener('input', function(e) {
+			e.target.style.height = 'inherit';
+			let computed = window.getComputedStyle(e.target);
+
+			var height = parseInt(computed.getPropertyValue('border-top-width'), 10)
+	             + parseInt(computed.getPropertyValue('padding-top'), 10)
+	             + e.target.scrollHeight
+	             + parseInt(computed.getPropertyValue('padding-bottom'), 10)
+	             + parseInt(computed.getPropertyValue('border-bottom-width'), 10);
+			this.style.height = height + 'px';
+			
+		});
+		/*
+		var autoExpand = function (field) {
+
+			// Reset field height
+			field.style.height = 'inherit';
+
+			// Get the computed styles for the element
+			var computed = window.getComputedStyle(field);
+
+			// Calculate the height
+			var height = parseInt(computed.getPropertyValue('border-top-width'), 10)
+			             + parseInt(computed.getPropertyValue('padding-top'), 10)
+			             + field.scrollHeight
+			             + parseInt(computed.getPropertyValue('padding-bottom'), 10)
+			             + parseInt(computed.getPropertyValue('border-bottom-width'), 10);
+
+			field.style.height = height + 'px';
+
+		};
+
+		document.addEventListener('input', function (event) {
+			if (event.target.tagName.toLowerCase() !== 'textarea') return;
+			autoExpand(event.target);
+		}, false);
+		*/
+	</script>
 <% end %>
