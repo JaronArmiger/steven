@@ -4,6 +4,7 @@
 	  <%= f.text_area :content, placeholder: "How you feelin?", class: "form-control" %>
 	</div>
 	<span class="image">
+		<%= f.label :image, "Upload a picture" %>
 		<%= f.file_field :image, accept: "image/jpeg, image/gif, image/png", class: "img-upload" %>
 	</span>
 	<%= f.submit "share", class: "btn" %>
