@@ -3,6 +3,7 @@
 	<div class="form-group">
 	  <%= f.text_area :content, placeholder: "How you feelin?", class: "form-control" %>
 	</div>
+	<%= f.color_field :favorite_color, value: '#ff00dd' %>
 	<div class="post-form-buttons">
 		<label for="post_image" class="file-label"><span class="glyphicon glyphicon-camera"></span></label>
 		<%= f.file_field :image, accept: "image/jpeg, image/gif, image/png", class: "img-upload" %>
