@@ -1,8 +1,29 @@
-<% if user_signed_in? %>
-  <%= link_to 'Go to App', '#', class: 'login-button' %>
-  <%= link_to 'Edit my account', edit_user_registration_path %>
-  <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
-<% else %>
-  <%= link_to 'Sign in', new_user_session_path, class: 'login-button' %>
-  <%= link_to 'Sign up', new_user_registration_path %>
-<% end %>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<ul class="navbar-nav flex-row justify-content-between">
+		<% if user_signed_in? %>
+		  <li class="nav-item">
+		  	<div class="dropdown">
+		  		<button class="btn dropdown-toggle"
+				  		 type="button" id="dropdownMenuButton"
+				  		 data-toggle="dropdown"
+				  		 aria-haspopup="true"
+				  		 aria-expanded="false">
+				  dropdown
+				</button>
+		  	
+			  	<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+			  		<%= link_to 'Account', edit_user_path(current_user), class: 'dropdown-item' %>
+			  <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'dropdown-item' %>
+			  	</div>
+		  	</div>
+		  </li>
+		  
+		<% else %>
+		  <li class="nav-item">
+		    <%= link_to 'Sign in', new_user_session_path, class: 'login-button' %>
+		  </li>
+		<% end %>
+	</ul>
+</nav>
+
+
