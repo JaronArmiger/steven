@@ -1,12 +1,13 @@
-<div class="post">
-	<div>
-		<%= image_tag post.image if post.image.attached? %>
-	</div>
-	<div>
-		<%= post.content %>
-	</div>
+<div class="post_wrapper">
+	<div class="card">
+		<%= image_tag post.image, class: "card-img-top" if post.image.attached? %>
 	
-	<span class="timestamp">
-		posted <%= time_ago_in_words(post.created_at) %> ago.
-	</span>
+		<div class="card-body">
+			<%= post.content %>
+		</div>
+		
+		<span class="timestamp">
+			posted <%= time_ago_in_words(post.created_at) %> ago.
+		</span>
+	</div>
 </div>
