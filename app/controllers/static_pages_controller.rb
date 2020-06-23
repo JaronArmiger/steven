@@ -3,6 +3,6 @@ class StaticPagesController < ApplicationController
 	def home
 		@main_user = User.first
 		@post = @main_user.posts.build
-		@feed_items = Post.all
+		@feed_items = Post.order('created_at DESC')
 	end
 end
