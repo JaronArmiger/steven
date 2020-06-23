@@ -1,5 +1,31 @@
 .container {
+	padding-right: 2px;
+	padding-left: 2px;
+}
 
+input[type="submit"] {
+	background-image: linear-gradient(to right, #68f2d7, #e3124d);
+	width: 50%;
+	border: none;
+	margin-top: 10px;
+	font-size: 17px;
+	font-weight: 800;
+	padding: 10px 20px; 
+	border-radius: 3px;
+	color: white;
+}
+
+
+.field label {
+
+}
+
+.field input[type="email"] {
+	width: 100%;
+}
+
+.field input[type="password"] {
+	width: 100%;
 }
 
 .navbar-nav .dropdown-menu {
