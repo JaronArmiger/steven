@@ -1,19 +1,20 @@
 <%= form_with(model: @post, local: true) do |f| %>
 	<%= render 'shared/error_messages', object: f.object %>
-	<div class="form-group">
+	<div class="form-group text-input">
 	  <%= f.text_area :content, placeholder: "How you feelin?", class: "form-control" %>
+	  <span id="x-button"></span>
 	</div>
 	<%= f.label :font_color %>
-	<%= f.color_field :font_color, value: '#ff00dd' %>
+	<%= f.color_field :font_color, value: '#000000' %>
 	<%= f.label :body_color %>
-	<%= f.color_field :body_color, value: '#ff00dd' %>
+	<%= f.color_field :body_color, value: '#ffffff' %>
 	<div class="post-form-buttons">
 		<label for="post_image" class="file-label"><span class="glyphicon glyphicon-camera"></span></label>
 		<%= f.file_field :image, accept: "image/jpeg, image/gif, image/png", class: "img-upload" %>
 		<%= f.submit "share", class: "share-button" %>
 	</div>
 	<script>
-		textarea = document.querySelector('textarea');
+		const textarea = document.querySelector('textarea');
 		textarea.addEventListener('input', function(e) {
 			e.target.style.height = 'inherit';
 			let computed = window.getComputedStyle(e.target);
@@ -25,6 +26,18 @@
 	             + parseInt(computed.getPropertyValue('border-bottom-width'), 10);
 			this.style.height = height + 'px';
 			
+		});
+		let buttonShowing = false;
+		const xButton = document.querySelector('#x-button');
+
+		textarea.addEventListener('input', function(e) {
+			if (!buttonShowing) {
+				xButton.style.display = "block";
+				buttonShowing = true;
+			};
+		});
+		xButton.addEventListener('click', function(e) {
+			textarea.value = '';
 		});
 	</script>
 <% end %>

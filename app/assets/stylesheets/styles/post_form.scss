@@ -29,3 +29,22 @@ input[type="file"] {
 .share-button {
 	margin: 0!important;
 }
+
+.text-input {
+	position: relative;
+}
+
+
+
+#x-button {
+	background-image: url('x-icon');
+	width: 2rem;
+	height: 2rem;
+	background-size: cover;
+	position: absolute;
+	top: .7rem;
+	right: 10px;
+	border: 0;
+	background-color: #fff;
+	display: none;
+}

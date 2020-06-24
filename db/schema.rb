@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(version: 2020_06_23_214024) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
     t.string "body_color", default: "#ffffff"
-    t.string "font_color", default: "#ffffff"
+    t.string "font_color", default: "#000000"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
