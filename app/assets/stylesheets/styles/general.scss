@@ -1,21 +1,22 @@
+$btn-gradient: linear-gradient(to right, #68f2d7, #e3124d);
+
 body {
 	background-color: #fca883;
 }
 
 .container {
-	padding-right: 2px;
-	padding-left: 2px;
+	padding: 0 .5rem 0 .5rem;
 }
 
 input[type="submit"] {
-	background-image: linear-gradient(to right, #68f2d7, #e3124d);
+	background-image: $btn-gradient;
 	width: 50%;
 	border: none;
 	margin-top: 10px;
 	font-size: 17px;
 	font-weight: 800;
 	padding: 10px 20px; 
-	border-radius: 3px;
+	border-radius: 1rem;
 	color: white;
 }
 
@@ -41,4 +42,5 @@ input[type="submit"] {
 
 .alert-notice {
 	background-color: #fce060;
+	color: #a69333;
 }

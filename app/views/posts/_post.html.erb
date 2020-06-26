@@ -3,11 +3,11 @@
 		<%= image_tag post.image, class: "card-img-top" if post.image.attached? %>
 	
 		<div class="card-body">
-			<%= post.content %>
-		</div>
-		
-		<span class="timestamp">
+			<p><%= post.content %></p>
+			<span class="timestamp">
 			posted <%= time_ago_in_words(post.created_at) %> ago.
 		</span>
+		</div>
+		
 	</div>
 </div>

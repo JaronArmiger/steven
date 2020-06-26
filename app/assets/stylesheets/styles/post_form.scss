@@ -1,8 +1,16 @@
+.post-form {
+	background-color: #fff;
+	border-radius: 1rem;
+	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+	padding: 1rem;
+}
+
 .post-form-buttons {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
+
 
 input[type="file"] {
 	width: 0.1px;
@@ -70,11 +78,13 @@ input[type="color"] {
 	margin: 0!important;
 }
 
-.text-input {
+.text-input-div {
 	position: relative;
 }
 
-
+.text-input {
+	border: 0;
+}
 
 #x-button {
 	background-image: image-url('x-icon');
@@ -83,7 +93,7 @@ input[type="color"] {
 	background-size: cover;
 	position: absolute;
 	top: .7rem;
-	right: 10px;
+	right: 1rem;
 	border: 0;
 	background-color: #fff;
 	display: none;
