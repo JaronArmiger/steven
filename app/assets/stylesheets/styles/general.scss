@@ -1,4 +1,7 @@
 $btn-gradient: linear-gradient(to right, #68f2d7, #e3124d);
+$dat-grey: rgba(0,0,0,0.7);
+$btn-border: 2px solid $dat-grey;
+$global-radius: 2rem;
 
 body {
 	background-color: #fca883;
@@ -9,17 +12,22 @@ body {
 }
 
 input[type="submit"] {
-	background-image: $btn-gradient;
+	//background-image: $btn-gradient;
+	background-color: rgba(0,0,0,0);
 	width: 50%;
-	border: none;
+	border: 2px solid rgba(0,0,0,.7);
 	margin-top: 10px;
 	font-size: 17px;
 	font-weight: 800;
 	padding: 10px 20px; 
-	border-radius: 1rem;
-	color: white;
+	border-radius: $global-radius;
+	color: rgba(0,0,0,.7);;
 }
 
+.logo-img {
+	width: 40px;
+	margin-top: -1rem;
+}
 
 .field input[type="email"] {
 	width: 100%;
