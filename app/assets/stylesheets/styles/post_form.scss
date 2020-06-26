@@ -1,6 +1,6 @@
 .post-form-buttons {
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
 	align-items: center;
 }
 
@@ -11,6 +11,46 @@ input[type="file"] {
 	overflow: hidden;
 	position: absolute;
 	z-index: -1;
+}
+
+.styling {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.color-pickers {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.picker {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 .4rem;
+}
+
+input[type="color"] {
+	border: 0;
+	width: 5rem;
+	height: 5rem;
+	background-color: rgba(0,0,0,0);
+}
+
+.upload-div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.upload-photo {
+	font-weight: bold;
+	margin-bottom: .5rem;
+	font-size: 2rem;
+
 }
 
 .file-label {

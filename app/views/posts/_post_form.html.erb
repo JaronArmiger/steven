@@ -4,13 +4,24 @@
 	  <%= f.text_area :content, placeholder: "How you feelin?", class: "form-control" %>
 	  <span id="x-button"></span>
 	</div>
-	<%= f.label :font_color %>
-	<%= f.color_field :font_color, value: '#000000' %>
-	<%= f.label :body_color %>
-	<%= f.color_field :body_color, value: '#ffffff' %>
+	<div class="styling form-group">
+		<div class="color-pickers">
+		  <div class="picker font-picker">
+			<%= f.label :font_color %>
+			<%= f.color_field :font_color, value: '#000000' %>
+		  </div>
+		  <div class="picker body-picker">
+			<%= f.label :body_color %>
+			<%= f.color_field :body_color, value: '#ffffff' %>
+		  </div>
+	    </div>
+	    <div class="upload-div">
+	      <span class="upload-photo">Upload Photo</span>
+		  <label for="post_image" class="file-label"><span class="glyphicon glyphicon-camera"></span></label>
+			<%= f.file_field :image, accept: "image/jpeg, image/gif, image/png", class: "img-upload" %>
+		</div>
+	</div>
 	<div class="post-form-buttons">
-		<label for="post_image" class="file-label"><span class="glyphicon glyphicon-camera"></span></label>
-		<%= f.file_field :image, accept: "image/jpeg, image/gif, image/png", class: "img-upload" %>
 		<%= f.submit "share", class: "share-button" %>
 	</div>
 	<script>
