@@ -1,5 +1,5 @@
 <div class="post_wrapper">
-	<div class="card">
+	<div class="card" style="background-color: <%= post.body_color %>; color: <%= post.font_color %>">
 		<%= image_tag post.image, class: "card-img-top" if post.image.attached? %>
 	
 		<div class="card-body">
