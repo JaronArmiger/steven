@@ -1,6 +1,5 @@
 let prevScrollPos = window.pageYOffset;
 const navbar = document.querySelector('nav');
-console.log(navbar);
 window.onscroll = function() {
 	let currentScrollPos = window.pageYOffset;
 	if (prevScrollPos > currentScrollPos) {
