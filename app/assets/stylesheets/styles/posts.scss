@@ -10,3 +10,17 @@
 	border-bottom-left-radius: $global-radius;
 	border-top-right-radius: $global-radius;
 }
+
+.change-buttons-wrapper {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.change-buttons-wrapper span {
+	margin: 0 1rem;
+	font-size: 2rem;
+}
+
+.change-buttons-wrapper a {
+	color: inherit;
+}
