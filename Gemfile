@@ -9,6 +9,8 @@ gem 'devise', '~> 4.7', '>= 4.7.2'
 gem 'rails_admin', '2.0.2'
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 gem 'jquery-rails', '~> 4.4'
+gem 'active_storage_validations', '~> 0.8.9'
+
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
@@ -52,6 +54,8 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+  gem 'minitest', '~> 5.14', '>= 5.14.1'
+  gem 'minitest-reporters', '~> 1.4', '>= 1.4.2'
 end
 
 group :production do
