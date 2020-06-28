@@ -10,4 +10,5 @@ class Post < ApplicationRecord
 	HEX_REGEX = /\A[#]{1}[\w]{6}\z/
 	validates :font_color, format: { with: HEX_REGEX }
 	validates :body_color, format: { with: HEX_REGEX }
+	validates :user_id, presence: true
 end
