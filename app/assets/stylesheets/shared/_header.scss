@@ -1,6 +1,7 @@
 .navbar {
 	position: fixed;
 	width: 100%;
+	transition: all .5s ease;
 	margin-left: 0;
 	z-index: 10000;
 	border-bottom: $btn-border;
