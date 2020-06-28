@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users, only: [:show, :edit, :update]
   root 'static_pages#home'
-  resources :posts,    only: [:create, :show, :index]
+  resources :posts
 end

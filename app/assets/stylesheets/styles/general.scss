@@ -2,13 +2,14 @@ $btn-gradient: linear-gradient(to right, #68f2d7, #e3124d);
 $dat-grey: rgba(0,0,0,0.7);
 $btn-border: 2px solid $dat-grey;
 $global-radius: 1rem;
+$bg-color: #fca883;
 
 * {
 	font-weight: 700;
 }
 
 body {
-	background-color: #fca883;
+	background-color: $bg-color;
 }
 
 a {
@@ -78,6 +79,7 @@ form.new_user {
 
 .field input:focus {
 	outline: none;
+	background-color: rgba(0,0,0,0);
 }
 
 input[type="submit"] {
