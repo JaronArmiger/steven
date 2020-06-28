@@ -3,19 +3,88 @@ $dat-grey: rgba(0,0,0,0.7);
 $btn-border: 2px solid $dat-grey;
 $global-radius: 1rem;
 
+* {
+	font-weight: 700;
+}
+
 body {
 	background-color: #fca883;
+}
+
+a {
+	color: $dat-grey;
+	font-weight: 700;
+}
+
+a:hover {
+	color: $dat-grey;
+	text-decoration: none;
 }
 
 .container {
 	padding: 0 .5rem 0 .5rem;
 }
 
+
+
+// devise forms
+
+h2 {
+	width: 100%;
+	text-align: center;
+}
+
+form.new_user {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+
+.devise-text-input {
+	display: flex;
+	flex-direction: column;
+}
+
+.actions {
+	display: flex;
+	justify-content: center;
+}
+
+.field {
+	margin: .5rem 0;
+}
+
+.field input[type="email"] {
+	//width: 80%;
+	background-color: rgba(0,0,0,0);
+	border: $btn-border;
+	margin: auto;
+	border-radius: $global-radius;
+	padding: 10px 20px;
+	font-size: 17px;
+	font-weight: 800;
+}
+
+.field input[type="password"] {
+	//width: 80%;
+	background-color: rgba(0,0,0,0);
+	border: $btn-border;
+	border-radius: $global-radius;
+	padding: 10px 20px;
+	font-size: 17px;
+	font-weight: 800; 
+}
+
+.field input:focus {
+	outline: none;
+}
+
 input[type="submit"] {
 	//background-image: $btn-gradient;
 	background-color: rgba(0,0,0,0);
-	width: 50%;
-	border: 2px solid rgba(0,0,0,.7);
+	width: 100%;
+	border: $btn-border;
 	margin-top: 10px;
 	font-size: 17px;
 	font-weight: 800;
@@ -29,13 +98,7 @@ input[type="submit"] {
 	margin-top: -1rem;
 }
 
-.field input[type="email"] {
-	width: 100%;
-}
 
-.field input[type="password"] {
-	width: 100%;
-}
 
 .navbar-nav .dropdown-menu {
 	position: absolute!important;
