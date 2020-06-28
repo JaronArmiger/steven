@@ -1,5 +1,13 @@
+if (typeof textarea === 'undefined' || textarea === null) {
+    console.log('working');
+}
 const textarea = document.querySelector('textarea');
-textarea.addEventListener('input', function(e) {
+console.log('running?');
+
+textarea.addEventListener('focus', changeHeight);
+textarea.addEventListener('focus', changeHeight);
+
+function changeHeight(e) {
 	e.target.style.height = 'inherit';
 	let computed = window.getComputedStyle(e.target);
 
@@ -9,8 +17,7 @@ textarea.addEventListener('input', function(e) {
          + parseInt(computed.getPropertyValue('padding-bottom'), 10)
          + parseInt(computed.getPropertyValue('border-bottom-width'), 10);
 	this.style.height = height + 'px';
-	
-});
+}
 let buttonShowing = false;
 const xButton = document.querySelector('#x-button');
 

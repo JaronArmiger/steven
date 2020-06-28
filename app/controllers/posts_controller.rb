@@ -3,6 +3,10 @@ class PostsController < ApplicationController
 		@posts = Post.all
 	end
 
+	def show
+		@post = Post.find(params[:id])
+	end
+
 	def create
 		@post = current_user.posts.build(post_params)
 		@post.image.attach(params[:post][:image])
@@ -15,7 +19,7 @@ class PostsController < ApplicationController
 		end
 	end
 
-	def show
+	def edit
 		@post = Post.find(params[:id])
 	end
 

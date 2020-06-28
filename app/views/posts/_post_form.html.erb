@@ -16,13 +16,13 @@
 		  </div>
 	    </div>
 	    <div class="upload-div">
-	      <span class="upload-photo">Upload Photo</span>
+	      <span class="upload-photo"><%= yield(:change) %> Photo</span>
 		  <label for="post_image" class="file-label"><span class="glyphicon glyphicon-camera"></span></label>
 			<%= f.file_field :image, accept: "image/jpeg, image/gif, image/png", class: "img-upload", id: "post_image" %>
 		</div>
 	</div>
 	<div class="post-form-buttons">
-		<%= f.submit "share", class: "share-button" %>
+		<%= f.submit yield(:submit), class: "share-button" %>
 	</div>
 	<%= javascript_include_tag 'post_form', 'data-turbolinks-track': 'reload' %>
 <% end %>
