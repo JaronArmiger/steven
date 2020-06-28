@@ -1,7 +1,10 @@
 require 'test_helper'
 
 class PostTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  def setup
+  end
+
+  test "should be valid" do
+  	
+  end
 end

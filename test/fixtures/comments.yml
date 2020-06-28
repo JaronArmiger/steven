@@ -5,9 +5,11 @@ one:
   name: MyString
   email: MyString
   website: MyString
+  commentable: one (Article)
 
 two:
   content: MyText
   name: MyString
   email: MyString
   website: MyString
+  commentable: one (Post)
