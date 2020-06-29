@@ -31,11 +31,15 @@ function postFormFunctionality() {
 	});
 
 	const file_field = document.querySelector('#post_image');
+	const file_label = document.querySelector('.file-label');
 	file_field.addEventListener('change', function(e) {
+		console.log(file_label.style["background-color"]);
+		file_label.style["background-color"] = "#44dbd1";
 		const size_in_megabytes = this.files[0].size/1024/1024;
 		if (size_in_megabytes > 5) {
 			alert("Max file size is 5MB. Choose a smaller file dawg");
 			file_field.value = '';
+			file_label.style["background-color"] = '';
 		}
 	});
 }

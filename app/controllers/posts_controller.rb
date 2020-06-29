@@ -23,6 +23,17 @@ class PostsController < ApplicationController
 		@post = Post.find(params[:id])
 	end
 
+	def update
+		@post = Post.find(params[:id])
+		@post.update_attributes(post_params)
+		if @post.save
+			flash[:success] = "post updated"
+			redirect_to post_path(@post)
+		else
+			render :edit
+		end
+	end
+
 	def destroy
 		@post = current_user.posts.find_by(id: params[:id])
 		@post.destroy
