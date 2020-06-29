@@ -61,7 +61,9 @@ form.new_user {
 	background-color: rgba(0,0,0,0);
 	border: $btn-border;
 	margin: auto;
-	border-radius: $global-radius;
+	border-bottom-left-radius: $global-radius;
+	border-top-right-radius: $global-radius;
+	//border-radius: $global-radius;
 	padding: 10px 20px;
 	font-size: 17px;
 	font-weight: 800;
@@ -71,7 +73,9 @@ form.new_user {
 	//width: 80%;
 	background-color: rgba(0,0,0,0);
 	border: $btn-border;
-	border-radius: $global-radius;
+	border-bottom-left-radius: $global-radius;
+	border-top-right-radius: $global-radius;
+	//border-radius: $global-radius;
 	padding: 10px 20px;
 	font-size: 17px;
 	font-weight: 800; 
@@ -90,8 +94,10 @@ input[type="submit"] {
 	margin-top: 10px;
 	font-size: 17px;
 	font-weight: 800;
-	padding: 10px 20px; 
-	border-radius: $global-radius;
+	padding: 10px 20px;
+	border-bottom-left-radius: $global-radius;
+	border-top-right-radius: $global-radius;
+	//border-radius: $global-radius;
 	color: rgba(0,0,0,.7);;
 }
 
@@ -115,5 +121,18 @@ input[type="submit"] {
 
 .alert-notice {
 	background-color: #fce060;
+	border: 2px solid #a69333;
 	color: #a69333;
+	border-top-left-radius: 0;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: $global-radius;
+	border-top-right-radius: $global-radius;
+}
+
+.alert-success {
+	border: 2px solid #3c763d;
+	border-top-left-radius: 0;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: $global-radius;
+	border-top-right-radius: $global-radius;
 }

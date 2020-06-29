@@ -1,7 +1,8 @@
 .post-form {
-	background-color: rgba(255,255,255,0.5);
-	border-bottom-left-radius: 1rem;
-	border-top-right-radius: 1rem;
+	background-color: rgba(255,255,255,0);
+	border: $btn-border;
+	border-bottom-left-radius: $global-radius;
+	border-top-right-radius: $global-radius;
 	//box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 	padding: 1rem;
 }
@@ -53,6 +54,8 @@ input[type="color"] {
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
+	border-left: $btn-border;
+	padding-left: 2rem;
 }
 
 .upload-photo {
@@ -63,8 +66,8 @@ input[type="color"] {
 }
 
 .file-label {
-    color: white;
-	background-image: linear-gradient(to bottom right, #0025b8, #798ddb);
+    color: $dat-grey;
+	//background-image: linear-gradient(to bottom right, #0025b8, #798ddb);
     width: 5rem;
     height: 5rem;
     display: inline-block;
@@ -72,6 +75,7 @@ input[type="color"] {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	border: $btn-border;
 	border-radius: 50%;
 }
 
@@ -85,8 +89,12 @@ input[type="color"] {
 
 .text-input {
 	border: $btn-border;
+	border-top-left-radius: 0;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: $global-radius;
+	border-top-right-radius: $global-radius;
 	background-color: rgba(255,255,255,0);
-	color: $dat-grey;
+	color: $dat-grey!important;
 	font-size: 17px;
 	font-weight: 700;
 }
@@ -94,7 +102,7 @@ input[type="color"] {
 .text-input:focus {
 	outline: none;
 	background-color: rgba(255,255,255,0);
-	
+	border: 0;
 }
 
 #x-button {

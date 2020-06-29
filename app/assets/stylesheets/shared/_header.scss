@@ -30,6 +30,10 @@
 .sign-in-btn {
 	//background-image: $btn-gradient;
 	border: $btn-border;
+	border-top-left-radius: 0;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: $global-radius;
+	border-top-right-radius: $global-radius;
 	font-weight: 700;
 	color: $dat-grey;
 }
