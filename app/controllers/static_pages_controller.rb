@@ -3,7 +3,12 @@ class StaticPagesController < ApplicationController
 	def home
 		@main_user = User.first
 		@post = @main_user.posts.build
-		session[:site_color] = Setting.first.color
+		if Setting.count >= 1
+			@setting = Setting.first
+		else
+			@setting = Setting.create
+		end
+		session[:site_color] = @setting.color
 		@feed_items = Post.order('created_at DESC')
 	end
 end
