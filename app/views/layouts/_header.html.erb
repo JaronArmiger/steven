@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg" style="background-color: <%= current_user.color if current_user %>">
+<nav class="navbar navbar-expand-lg" style="background-color: <%= session[:site_color] %>">
   <div class="top-wrapper">
   	<% if user_signed_in? %>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,7 +25,7 @@
 	        <%= link_to 'Manage articles', '#', class: 'nav-link' %>
 	      </li>
 	      <li class="nav-item">
-	        <%= link_to 'Change Color', users_edit_color_path, class: 'nav-link' %>
+	        <%= link_to 'Change Color', edit_setting_path(1), class: 'nav-link' %>
 	      </li>
 	      <li class="nav-item">
 	      	<%= link_to 'Edit Account Details', edit_user_registration_path, class: 'nav-link' %>

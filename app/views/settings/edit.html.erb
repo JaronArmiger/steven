@@ -1,0 +1,10 @@
+<%= form_with(model: @setting) do |f| %>
+	<div class="user-color">
+	  <%= f.label(:color) %>
+	  <%= f.color_field :color %>
+	  <div class="post-form-buttons">
+		<%= f.submit "Save Changes", class: "color-button" %>
+	  </div>
+	</div>
+	
+<% end %>

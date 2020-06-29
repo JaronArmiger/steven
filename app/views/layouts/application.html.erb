@@ -2,7 +2,7 @@
 <html>
   <%= render 'layouts/head' %>
 
-  <body style="background-color: <%= current_user.color if current_user%>">
+  <body style="background-color: <%= session[:site_color] %>">
     <%= render 'layouts/header' %>
     <div class="container">
       <div class="dummy"></div>
