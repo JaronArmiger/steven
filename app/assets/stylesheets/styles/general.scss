@@ -8,8 +8,23 @@ $bg-color: #fca883;
 	font-weight: 700;
 }
 
+html,body {
+	height: 100%;
+	margin: 0;
+}
+
 body {
-	//background-color: $bg-color;
+	background-color: #e6493e;
+}
+
+.container {
+	padding: 0 .7rem 0 .7rem;
+	min-height: 100%;
+	margin-bottom: -5rem;
+}
+
+.footer {
+
 }
 
 a {
@@ -20,10 +35,6 @@ a {
 a:hover {
 	color: $dat-grey;
 	text-decoration: none;
-}
-
-.container {
-	padding: 0 .7rem 0 .7rem;
 }
 
 
@@ -172,3 +183,4 @@ input[type="submit"] {
 .user_color input[type="submit"] {
 
 }
+
