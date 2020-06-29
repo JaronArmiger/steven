@@ -9,7 +9,7 @@ $bg-color: #fca883;
 }
 
 body {
-	background-color: $bg-color;
+	//background-color: $bg-color;
 }
 
 a {
@@ -127,8 +127,7 @@ input[type="submit"] {
 	height: 80px;
 }
 
-.alert {
-}
+// alerts
 
 .alert-notice {
 	background-color: #fce060;
@@ -146,4 +145,30 @@ input[type="submit"] {
 	border-bottom-right-radius: 0;
 	border-bottom-left-radius: $global-radius;
 	border-top-right-radius: $global-radius;
+}
+
+// color form
+
+.user-color {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: auto;
+}
+
+.user-color label {
+	font-size: 2rem;
+}
+
+.user-color input[type="color"] {
+	border: $btn-border;
+	width: 100%;
+	border-radius: $global-radius;
+	border-top-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.user_color input[type="submit"] {
+
 }

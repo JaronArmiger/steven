@@ -1,17 +1,11 @@
 class UsersController < ApplicationController
-	def show
-		@user = current_user
+	def edit_color
+		render 'users/edit_color'
 	end
 
-	def edit
-		@user = current_user
+	def update_color
+		current_user.color = params[:color]
+		current_user.save
+		redirect_to root_url
 	end
-
-	def update
-	end
-
-	private
-
-	  def user_params
-	  end
 end
