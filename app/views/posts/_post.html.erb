@@ -9,6 +9,9 @@
 			</span>
 		</div>
 		<div class="card-body change-buttons-wrapper">
+			<%= link_to post_path(post) do %>
+				<span class="glyphicon glyphicon-eye-open"></span>
+			<% end %>
 			<%= link_to edit_post_path(post) do %>
 				<span class="glyphicon glyphicon-pencil"></span>
 			<% end %>

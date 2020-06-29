@@ -42,6 +42,17 @@ form.new_user {
 	margin-bottom: 2rem;
 }
 
+form.edit_user {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	margin-bottom: 2rem;
+}
+
+.edit_user .actions {
+	align-self: center;
+}
+
 .devise-text-input {
 	display: flex;
 	flex-direction: column;
