@@ -1,6 +1,10 @@
 class SettingsController < ApplicationController
 	def edit
-		@setting = Setting.first
+		if Setting.count >= 1
+			@setting = Setting.first
+		else
+			@setting = Setting.create
+		end
 	end
 
 	def update
