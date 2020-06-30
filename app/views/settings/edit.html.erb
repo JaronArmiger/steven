@@ -1,4 +1,5 @@
-<%= form_with(model: @setting) do |f| %>
+<%= form_with(model: @setting, local: true) do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
 	<div class="user-color">
 	  <%= f.label(:color) %>
 	  <%= f.color_field :color %>

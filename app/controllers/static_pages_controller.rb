@@ -8,6 +8,7 @@ class StaticPagesController < ApplicationController
 		else
 			@setting = Setting.create
 		end
+		session[:setting_id] = @setting.id
 		session[:site_color] = @setting.color
 		@feed_items = Post.order('created_at DESC')
 	end
