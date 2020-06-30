@@ -3,7 +3,7 @@ require 'test_helper'
 class PostsControllerTest < ActionDispatch::IntegrationTest
   def setup
   	@post = posts(:one)
-    get root_path
+    get root_path # this sets the setting color and id in the session
     @user = users(:alfonso)
     @original_content = @post.content
     @original_font_color = @post.font_color
