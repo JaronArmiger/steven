@@ -5,11 +5,14 @@ require 'minitest/reporters'
 Minitest::Reporters.use!
 
 class ActiveSupport::TestCase
+  #include Devise::Test::ControllerHelpers
   # Run tests in parallel with specified workers
   parallelize(workers: :number_of_processors)
   
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
+end
 
-  # Add more helper methods to be used by all tests here...
+class ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
 end
