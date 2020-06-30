@@ -66,8 +66,14 @@ form.new_user {
 form.edit_user {
 	display: flex;
 	flex-direction: column;
-	align-items: start;
+	align-items: center;
 	margin-bottom: 2rem;
+}
+
+.edit_user .field {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .edit_user .actions {
@@ -131,6 +137,19 @@ input[type="submit"] {
 	border-top-right-radius: $global-radius;
 	//border-radius: $global-radius;
 	color: rgba(0,0,0,.7);;
+}
+
+.cancel {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+
+.links {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .logo-img {
