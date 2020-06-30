@@ -3,6 +3,7 @@ require 'test_helper'
 class SettingsControllerTest < ActionDispatch::IntegrationTest
   def setup
   	@setting = settings(:one)
+    get root_path # this sets the setting color and id in the session
   	@original_color = @setting.color
   	@user = users(:alfonso)
   end

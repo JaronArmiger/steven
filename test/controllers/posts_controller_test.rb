@@ -3,6 +3,7 @@ require 'test_helper'
 class PostsControllerTest < ActionDispatch::IntegrationTest
   def setup
   	@post = posts(:one)
+    get root_path
     @user = users(:alfonso)
     @original_content = @post.content
     @original_font_color = @post.font_color
@@ -35,7 +36,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
   	assert_redirected_to new_user_session_path
   end
 
-  test "should successfully get edit when logged in" do
+  test "should successfully get edit_post_path when logged in" do
     sign_in @user
     get edit_post_path(@post)
     assert_template 'posts/edit'
