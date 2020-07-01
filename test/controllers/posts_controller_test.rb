@@ -17,6 +17,17 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
   	assert_redirected_to new_user_session_path
   end
 
+  test "posts show path accessible for signed in or signed out user" do
+    get post_path(@post)
+    assert_response :success
+    assert_match @post.content, response.body
+
+    sign_in @user
+    get post_path(@post)
+    assert_response :success
+    assert_match @post.content, response.body    
+  end
+
   test "should successfully create post when logged in" do
     sign_in @user
     content = "veo su luz"
