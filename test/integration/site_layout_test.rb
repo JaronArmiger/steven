@@ -11,7 +11,7 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
   	assert_select 'a[href=?]', new_user_session_path
     post = @user.posts.first
     assert_match post.content, response.body
-  	assert_select 'a[href=?]', post_path(post), count: 0
+  	assert_select 'a[href=?]', post_path(post), count: 1
     assert_select 'a[href=?]', edit_post_path(post), count: 0
 
     assert_template partial: 'posts/_post'
