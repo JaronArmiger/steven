@@ -37,7 +37,7 @@
 	      </li>
 	      <li class="dropdown desktop-nav-item">
             <a href='#' class="dropdown-toggle" data-toggle="dropdown">Account</b></a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu dropdown-menu-right" style="background-color: <%= session[:site_color] %>">
                 <li class="nav-item">
 		      	<%= link_to 'Edit Account Details', edit_user_registration_path, class: 'nav-link' %>
 		      </li>
