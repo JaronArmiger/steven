@@ -38,11 +38,39 @@
 	color: $dat-grey;
 }
 
+.desktop-nav-item {
+	display: none;
+}
+
+
 //media queries
 
 @media (min-width: 768px) {
 	.top-wrapper {
+		width: 70%;
+	}
 
+	.navbar-collapse {
+		width: 30%;
+	}
+
+	.navbar-nav {
+		display: flex;
+		width: 100%;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.desktop-nav-item {
+		display: list-item;
+	}
+
+	.mobile-nav-item {
+		display: none;
+	}
+
+	.glyphicon-home {
+		font-size: 3rem;
 	}
 }
 

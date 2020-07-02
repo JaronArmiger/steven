@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg" style="background-color: <%= session[:site_color] %>">
+<nav class="navbar navbar-expand-lg " style="background-color: <%= session[:site_color] %>">
   <div class="top-wrapper">
   	<% if user_signed_in? %>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,27 +15,37 @@
   <% if user_signed_in? %>
 	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 	    <ul class="navbar-nav mr-auto">
-	      <li class="nav-item">
+	      <li class="nav-item mobile-nav-item">
 	        <%= link_to 'Dashboard', root_path, class: 'nav-link' %>
 	      </li>
-	      <li class="nav-item active">
-	        <%= link_to 'Write Article', '#', class: 'nav-link' %>
+	      <li class="nav-item desktop-nav-item">
+	        <%= link_to root_path, class: 'nav-link' do %>
+			  <span class="glyphicon glyphicon-home"></span>
+	        <% end %>
 	      </li>
 	      <li class="nav-item">
 	        <%= link_to 'Manage posts', '#', class: 'nav-link' %>
 	      </li>
 	      <li class="nav-item">
-	        <%= link_to 'Manage articles', '#', class: 'nav-link' %>
-	      </li>
-	      <li class="nav-item">
 	        <%= link_to 'Change Color', edit_setting_path(session[:setting_id]), class: 'nav-link' %>
 	      </li>
-	      <li class="nav-item">
+	      <li class="nav-item mobile-nav-item">
 	      	<%= link_to 'Edit Account Details', edit_user_registration_path, class: 'nav-link' %>
 	      </li>
-	      <li class="nav-item">
+	      <li class="nav-item mobile-nav-item">
 			<%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
 	      </li>
+	      <li class="dropdown desktop-nav-item">
+            <a href='#' class="dropdown-toggle" data-toggle="dropdown">Account</b></a>
+            <ul class="dropdown-menu">
+                <li class="nav-item">
+		      	<%= link_to 'Edit Account Details', edit_user_registration_path, class: 'nav-link' %>
+		      </li>
+		      <li class="nav-item">
+				<%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
+		      </li>
+            </ul>
+          </li>
 	    </ul>
 	  </div>
   <% end %>
